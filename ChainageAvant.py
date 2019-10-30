@@ -94,8 +94,8 @@ class ChainageAvant:
                 return True
         return False
 
-    def read_and_parse_file(self):
-        f = open("C:/Users/Kalelt'has/Desktop/Tp AI/méteorologies.txt", "r")
+    def read_and_parse_file(self, path):
+        f = open(path, "r")
         line = f.readline()
         while (line):
             if not line.startswith('si'):
@@ -106,13 +106,18 @@ class ChainageAvant:
             line = f.readline()
         f.close()
 
-    def StartChainge(self, key, value, log):
-        self.read_and_parse_file()
+    def StartChainge(self, key, value, log, path, saturation):
+        self.read_and_parse_file(path)
+        log_file = open("C:/Users/Kalelt'has/Desktop/My GL4/AI/Tp AI/logs/log.txt", "w")
         bre = []
-        but = Fait(key, value)
+        if saturation:
+            but = Fait("", "")
+        else:
+            but = Fait(key, value)
 
         if self.checkButDansBF(but):
             log.setText("But atteint, se trouvant déjà dans BF")
+            log_file.write("But atteint, se trouvant déjà dans BF")
             return but
         else:
             resultat_log = 'Debut chainage avant\n'
@@ -124,6 +129,7 @@ class ChainageAvant:
 
                 if (len(bre) == 0):
                     log.setText(resultat_log)
+                    log_file.write(resultat_log)
                     return False
 
                 regleToExecute = bre[0]
@@ -135,6 +141,7 @@ class ChainageAvant:
                     resultat_log += 'But atteint \n'
                     resultat_log += '*****************\n'
                     log.setText(resultat_log)
+                    log_file.write(resultat_log)
                     return but
 
                 for regle in bre:

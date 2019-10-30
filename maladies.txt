@@ -1,5 +1,5 @@
 Douleur = "Gorge"
-Fièvre = Vrai
+Fièvre = Faux
 Sexe = "Homme"
 
 si Douleur = "Abdomen" et Vomissements = Faux alors Appendicite = Vrai

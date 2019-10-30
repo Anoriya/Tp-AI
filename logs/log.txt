@@ -1,0 +1,81 @@
+Debut chainage avant
+
+Regle executée :
+regle
+premisses
+		attribut:Restaurants 3 toques, valeur:Vrai, operateur:=
+	conclusion
+	Très bons restaurants = Vrai
+	executed True
+regle
+premisses
+		attribut:Restaurants 3 toques, valeur:Vrai, operateur:=
+	conclusion
+	Très bons restaurants = Vrai
+	executed True
+regle
+premisses
+		attribut:Parcs verdoyants, valeur:Vrai, operateur:=		attribut:Avenues larges, valeur:Vrai, operateur:=
+	conclusion
+	Végétation abondante = Vrai
+	executed True
+Nouvelle base des faits
+fait : 
+	attribut:Parcs verdoyants, 
+	valeur:Vrai, 
+	flag:-1
+ fait : 
+	attribut:Avenues larges, 
+	valeur:Vrai, 
+	flag:-1
+ fait : 
+	attribut:Monuments, 
+	valeur:Vrai, 
+	flag:-1
+ fait : 
+	attribut:Restaurants 3 toques, 
+	valeur:Vrai, 
+	flag:-1
+ fait : 
+	attribut:Ville ancienne, 
+	valeur:Vrai, 
+	flag:-1
+ fait : 
+	attribut:Très bons restaurants , 
+	valeur: Vrai, 
+	flag:6
+ fait : 
+	attribut:Végétation abondante , 
+	valeur: Vrai, 
+	flag:9
+ fait : 
+	attribut:Parcs verdoyants, 
+	valeur:Vrai, 
+	flag:-1
+ fait : 
+	attribut:Avenues larges, 
+	valeur:Vrai, 
+	flag:-1
+ fait : 
+	attribut:Monuments, 
+	valeur:Vrai, 
+	flag:-1
+ fait : 
+	attribut:Restaurants 3 toques, 
+	valeur:Vrai, 
+	flag:-1
+ fait : 
+	attribut:Ville ancienne, 
+	valeur:Vrai, 
+	flag:-1
+ 
+Regle executée :
+regle
+premisses
+		attribut:Parcs verdoyants, valeur:Vrai, operateur:=		attribut:Avenues larges, valeur:Vrai, operateur:=
+	conclusion
+	Végétation abondante = Vrai
+	executed True
+*****************
+But atteint 
+*****************
